@@ -1,0 +1,24 @@
+cd ../../../src/
+python enhance_generate.py \
+    --dataset pubmed \
+    --model agdn \
+    --K 2 \
+    --eval-steps 1 \
+    --log-steps 10 \
+    --epochs 700 \
+    --runs 10\
+    --negative-sampler global \
+    --eval-metric hits \
+    --lr 0.001 \
+    --hop-norm \
+    --n-layers 2 \
+    --n-hidden 256 \
+    --out-hidden 256 \
+    --n-heads 1 \
+    --dropout 0.5 \
+    --attn-drop 0. \
+    --input-drop 0. \
+    --diffusion-drop 0. \
+    --loss-func CE \
+    --n-neg 1 \
+    --bn

@@ -1,0 +1,36 @@
+cd ../../../src/
+python -u enhance_dataprocess.py \
+    --dataset ogbl-collab \
+    --negative-sampler strict_global \
+    --model sage \
+    --p-model sage \
+    --p-loss CE \
+    --epochs 1000 \
+    --runs 5 \
+    --eval-steps 1 \
+    --log-steps 50 \
+    --eval-metric hits \
+    --lr 0.0005 \
+    --n-layers 2 \
+    --n-hidden 512 \
+    --out-hidden 512 \
+    --n-heads 1 \
+    --dropout 0.6 \
+    --attn-drop 0. \
+    --edge-drop 0. \
+    --input-drop 0. \
+    --diffusion-drop 0. \
+    --weight-style HA \
+    --use-valedges-as-input \
+    --clip-grad-norm 1 \
+    --loss-func RoL \
+    --predictor MLP \
+    --no-node-feat \
+    --seed 0 \
+    --no-pos-emb \
+    --year 2010 \
+    --bn \
+    --q 0.4 \
+    --auxiliary_size 200000 \
+    --batch-size 65536 \
+    --addtrain

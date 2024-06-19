@@ -1,0 +1,29 @@
+cd ../../../src/
+python -u enhance_generate.py \
+    --dataset ogbl-collab \
+    --negative-sampler strict_global \
+    --model agdn \
+    --epochs 800 \
+    --eval-steps 1 \
+    --log-steps 100 \
+    --K 2 \
+    --transition-matrix gat \
+    --eval-metric hits \
+    --lr 0.001 \
+    --n-layers 2 \
+    --n-hidden 256 \
+    --n-heads 1 \
+    --dropout 0.8 \
+    --attn-drop 0. \
+    --edge-drop 0. \
+    --input-drop 0. \
+    --diffusion-drop 0. \
+    --weight-style HA \
+    --use-valedges-as-input \
+    --clip-grad-norm 1 \
+    --loss-func CE \
+    --predictor MLP \
+    --no-node-feat \
+    --seed 0 \
+    --no-pos-emb \
+    --year 2010 
